@@ -1,3 +1,4 @@
+import { Navbar } from "flowbite-react";
 import { MdOutlineNotifications } from "react-icons/md";
 import { MdOutlineCloudDownload } from "react-icons/md";
 import { MdOutlineCached } from "react-icons/md";
@@ -30,17 +31,381 @@ const Home = () => {
   return (
     <>
       <div className="antialiased theme-bg">
-        {/* left section start */}
+        <nav className="px-4 py-2.5 fixed left-0 right-0 top-0 z-50">
+          <div className="w-full">
+            <div className="flex flex-nowrap">
+              <div className="w-64 flex flex-col">
+                <a href="#" className="flex items-start justify-between mr-4">
+                  <img
+                    src="https://flowbite.s3.amazonaws.com/logo.svg"
+                    className="mr-3 h-8"
+                    alt="Logo"
+                  />
+                </a>
+              </div>
+              <div className="flex-grow">
+                <div className="flex flex-wrap justify-between items-center pl-4">
+                  {/* Search Start */}
+                  <form action="#" method="GET">
+                    <div className="relative search-ui">
+                      <div className="flex absolute inset-y-0 right-0 items-center pr-3 pointer-events-none">
+                        <MdSearch className="w-6 h-6 text-gray-400" />
+                      </div>
+                      <input
+                        type="text"
+                        name="email"
+                        id="topbar-search"
+                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                        placeholder="Search"
+                      />
+                    </div>
+                  </form>
+                  {/* Search End */}
 
+                  <div className="flex items-center order-2">
+                    {/* Notification icons start */}
+                    <button
+                      type="button"
+                      data-dropdown-toggle="notification-dropdown"
+                      className="p-2.5 mr-4 theme-bg-blue rounded-lg"
+                    >
+                      <MdOutlineNotifications className="text-2xl theme-blue-color" />
+                    </button>
+                    <div
+                      className="hidden overflow-hidden z-50 my-4 max-w-sm text-base list-none bg-white rounded divide-y divide-gray-100 shadow-lg dark:divide-gray-600 dark:bg-gray-700 rounded-xl"
+                      id="notification-dropdown"
+                    >
+                      <div className="block py-2 px-4 text-base font-medium text-center text-gray-700 bg-gray-50 dark:bg-gray-600 dark:text-gray-300">
+                        Notifications
+                      </div>
+                      <div>
+                        <a
+                          href="#"
+                          className="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600"
+                        >
+                          <div className="flex-shrink-0">
+                            <img
+                              className="w-11 h-11 rounded-full"
+                              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
+                              alt="Bonnie Green avatar"
+                            />
+                            <div className="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5  border border-white bg-primary-700 dark:border-gray-700">
+                              <svg
+                                aria-hidden="true"
+                                className="w-3 h-3 text-white"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z"></path>
+                                <path d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path>
+                              </svg>
+                            </div>
+                          </div>
+                          <div className="pl-3 w-full">
+                            <div className="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400">
+                              New message from
+                              <span className="font-semibold text-gray-900 dark:text-white">
+                                Bonnie Green
+                              </span>
+                              : "Hey, what's up? All set for the presentation?"
+                            </div>
+                            <div className="text-xs font-medium text-primary-600 dark:text-primary-500">
+                              a few moments ago
+                            </div>
+                          </div>
+                        </a>
+                        <a
+                          href="#"
+                          className="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600"
+                        >
+                          <div className="flex-shrink-0">
+                            <img
+                              className="w-11 h-11 rounded-full"
+                              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
+                              alt="Jese Leos avatar"
+                            />
+                            <div className="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-gray-900 rounded-full border border-white dark:border-gray-700">
+                              <svg
+                                aria-hidden="true"
+                                className="w-3 h-3 text-white"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"></path>
+                              </svg>
+                            </div>
+                          </div>
+                          <div className="pl-3 w-full">
+                            <div className="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400">
+                              <span className="font-semibold text-gray-900 dark:text-white">
+                                Jese leos
+                              </span>
+                              and
+                              <span className="font-medium text-gray-900 dark:text-white">
+                                5 others
+                              </span>
+                              started following you.
+                            </div>
+                            <div className="text-xs font-medium text-primary-600 dark:text-primary-500">
+                              10 minutes ago
+                            </div>
+                          </div>
+                        </a>
+                        <a
+                          href="#"
+                          className="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600"
+                        >
+                          <div className="flex-shrink-0">
+                            <img
+                              className="w-11 h-11 rounded-full"
+                              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png"
+                              alt="Joseph McFall avatar"
+                            />
+                            <div className="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-red-600 rounded-full border border-white dark:border-gray-700">
+                              <svg
+                                aria-hidden="true"
+                                className="w-3 h-3 text-white"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                  clip-rule="evenodd"
+                                ></path>
+                              </svg>
+                            </div>
+                          </div>
+                          <div className="pl-3 w-full">
+                            <div className="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400">
+                              <span className="font-semibold text-gray-900 dark:text-white">
+                                Joseph Mcfall
+                              </span>
+                              and
+                              <span className="font-medium text-gray-900 dark:text-white">
+                                141 others
+                              </span>
+                              love your story. See it and view more stories.
+                            </div>
+                            <div className="text-xs font-medium text-primary-600 dark:text-primary-500">
+                              44 minutes ago
+                            </div>
+                          </div>
+                        </a>
+                        <a
+                          href="#"
+                          className="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600"
+                        >
+                          <div className="flex-shrink-0">
+                            <img
+                              className="w-11 h-11 rounded-full"
+                              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png"
+                              alt="Roberta Casas image"
+                            />
+                            <div className="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-green-400 rounded-full border border-white dark:border-gray-700">
+                              <svg
+                                aria-hidden="true"
+                                className="w-3 h-3 text-white"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z"
+                                  clip-rule="evenodd"
+                                ></path>
+                              </svg>
+                            </div>
+                          </div>
+                          <div className="pl-3 w-full">
+                            <div className="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400">
+                              <span className="font-semibold text-gray-900 dark:text-white">
+                                Leslie Livingston
+                              </span>
+                              mentioned you in a comment:
+                              <span className="font-medium text-primary-600 dark:text-primary-500">
+                                @bonnie.green
+                              </span>
+                              what do you say?
+                            </div>
+                            <div className="text-xs font-medium text-primary-600 dark:text-primary-500">
+                              1 hour ago
+                            </div>
+                          </div>
+                        </a>
+                        <a
+                          href="#"
+                          className="flex py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-600"
+                        >
+                          <div className="flex-shrink-0">
+                            <img
+                              className="w-11 h-11 rounded-full"
+                              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/robert-brown.png"
+                              alt="Robert image"
+                            />
+                            <div className="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-purple-500 rounded-full border border-white dark:border-gray-700">
+                              <svg
+                                aria-hidden="true"
+                                className="w-3 h-3 text-white"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path>
+                              </svg>
+                            </div>
+                          </div>
+                          <div className="pl-3 w-full">
+                            <div className="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400">
+                              <span className="font-semibold text-gray-900 dark:text-white">
+                                Robert Brown
+                              </span>
+                              posted a new video: Glassmorphism - learn how to
+                              implement the new design trend.
+                            </div>
+                            <div className="text-xs font-medium text-primary-600 dark:text-primary-500">
+                              3 hours ago
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <a
+                        href="#"
+                        className="block py-2 text-md font-medium text-center text-gray-900 bg-gray-50 hover:bg-gray-100 dark:bg-gray-600 dark:text-white dark:hover:underline"
+                      >
+                        <div className="inline-flex items-center">
+                          <svg
+                            aria-hidden="true"
+                            className="mr-2 w-4 h-4 text-gray-500 dark:text-gray-400"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                            <path
+                              fill-rule="evenodd"
+                              d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                              clip-rule="evenodd"
+                            ></path>
+                          </svg>
+                          View all
+                        </div>
+                      </a>
+                    </div>
+
+                    <button
+                      type="button"
+                      data-dropdown-toggle="notification-dropdown"
+                      className="p-2.5 mr-4 theme-bg-green rounded-lg"
+                    >
+                      <MdOutlineCloudDownload className="text-2xl theme-green-color" />
+                    </button>
+
+                    <button
+                      type="button"
+                      data-dropdown-toggle="notification-dropdown"
+                      className="p-2.5 mr-4 theme-bg-gray rounded-lg"
+                    >
+                      <MdOutlineCached className="text-2xl theme-gray-color" />
+                    </button>
+
+                    <button
+                      type="button"
+                      data-dropdown-toggle="notification-dropdown"
+                      className="p-2.5 mr-4 theme-bg-red rounded-lg relative inline-flex items-center text-sm font-medium text-center "
+                    >
+                      <MdOutlineSettings className="text-2xl theme-red-color" />
+                      <div className="absolute inline-flex items-center justify-center w-6 h-6 text-xs  text-white bg-red-500 border-2 border-white rounded-full -top-2 -right-2">
+                        19
+                      </div>
+                    </button>
+
+                    <button
+                      type="button"
+                      className="flex mx-3 text-sm"
+                      id="user-menu-button"
+                      aria-expanded="false"
+                      data-dropdown-toggle="dropdown"
+                    >
+                      <div className="flex items-center space-x-4 pl-12">
+                        <div className="font-medium dark:text-white">
+                          <div>
+                            Hello, <span className="font-bold">Ajay K</span>
+                          </div>
+                        </div>
+                        <img
+                          className="w-10 h-10 rounded-full ring-4 ring-white"
+                          src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gough.png"
+                          alt=""
+                        />
+                      </div>
+                    </button>
+                    <div
+                      className="hidden z-50 my-4 w-56 text-base list-none bg-white  divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600 rounded-xl"
+                      id="dropdown"
+                    >
+                      <div className="py-3 px-4">
+                        <span className="block text-sm text-gray-900 truncate dark:text-white">
+                          ajay.k@shipease.in
+                        </span>
+                      </div>
+                      <ul
+                        className="py-1 text-gray-700 dark:text-gray-300"
+                        aria-labelledby="dropdown"
+                      >
+                        <li>
+                          <a
+                            href="#"
+                            className="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                          >
+                            My profile
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                          >
+                            Account settings
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                          >
+                            Collections
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                          >
+                            Sign out
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  {/* Notification icons start */}
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        {/* left section start */}
         <aside
-          className="fixed top-0 left-0 z-40 w-56 h-screen transition-transform -translate-x-full bg-white border-r border-gray-200 md:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+          className="fixed top-0 left-0 z-40 w-56 h-screen pt-14 transition-transform -translate-x-full bg-white border-r border-gray-200 md:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
           aria-label="Sidenav"
           id="drawer-navigation"
         >
-          <div className="overflow-y-auto h-full">
-            <div className="logo">
-              <img src="logo.png" alt="logo" />
-            </div>
+          <div className="overflow-y-auto h-full bg-white dark:bg-gray-800">
             <ul className="space-y-2 left-nav-ui">
               <li>
                 <a href="#" className="flex items-center">
@@ -120,216 +485,9 @@ const Home = () => {
 
         {/* left section end */}
 
-        <main className="p-8 ml-52 h-auto pt-2">
-          {/* nav bar start */}
-          <nav className="py-2.5">
-            <div className="container">
-              <div className="flex flex-wrap justify-between items-center">
-                {/* Search Start */}
-                <form action="#" method="GET">
-                  <div className="relative search-ui">
-                    <div className="flex absolute inset-y-0 right-0 items-center pr-3 pointer-events-none">
-                      <MdSearch className="w-6 h-6 text-gray-400" />
-                    </div>
-                    <input
-                      type="text"
-                      name="email"
-                      id="topbar-search"
-                      className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                      placeholder="Search"
-                    />
-                  </div>
-                </form>
-                {/* Search End */}
-
-                <div className="flex items-center order-2">
-                  {/* Notification icons start */}
-                  <button
-                    type="button"
-                    data-dropdown-toggle="notification-dropdown"
-                    className="p-2.5 mr-4 theme-bg-blue rounded-lg relative inline-flex items-center text-sm font-medium text-center "
-                  >
-                    <MdOutlineNotifications className="text-2xl theme-blue-color" />
-                    <div className="absolute inline-flex items-center justify-center w-6 h-6 text-xs  text-white theme-bg-blue-solid border-2 border-white rounded-full -top-2 -right-2">
-                      19
-                    </div>
-                  </button>
-                  <div
-                    className="hidden overflow-hidden z-50 my-4 max-w-sm text-base list-none bg-white rounded divide-y divide-gray-100 shadow-lg dark:divide-gray-600 dark:bg-gray-700 rounded-xl"
-                    id="notification-dropdown"
-                  >
-                    <div className="block py-2 px-4 text-base font-medium text-center text-gray-700">
-                      Notifications
-                    </div>
-                    <div>
-                      <a
-                        href="#"
-                        className="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600"
-                      >
-                        <div className="flex-shrink-0">
-                          <img
-                            className="w-11 h-11 rounded-full"
-                            src="ajay.jpeg"
-                            alt="Ajay K"
-                          />
-                        </div>
-                        <div className="pl-3 w-full">
-                          <div className="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400">
-                            New message from : "Hey, what's up? All set for the
-                            presentation?"
-                          </div>
-                          <div className="text-xs font-medium text-primary-600 dark:text-primary-500">
-                            a few moments ago
-                          </div>
-                        </div>
-                      </a>
-                      <a
-                        href="#"
-                        className="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600"
-                      >
-                        <div className="flex-shrink-0">
-                          <img
-                            className="w-11 h-11 rounded-full"
-                            src="Lalit-Singh.jpeg"
-                            alt="Lalit Singh"
-                          />
-                        </div>
-                        <div className="pl-3 w-full">
-                          <div className="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400">
-                            Jese leos and 5 others started following you.
-                          </div>
-                          <div className="text-xs font-medium text-primary-600 dark:text-primary-500">
-                            10 minutes ago
-                          </div>
-                        </div>
-                      </a>
-                      <a
-                        href="#"
-                        className="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600"
-                      >
-                        <div className="flex-shrink-0">
-                          <img
-                            className="w-11 h-11 rounded-full"
-                            src="Pawan-Kumar.jpeg"
-                            alt="Pawan Kumar"
-                          />
-                        </div>
-                        <div className="pl-3 w-full">
-                          <div className="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400">
-                            Joseph Mcfall and love your story. See it and view
-                            more stories.
-                          </div>
-                          <div className="text-xs font-medium text-primary-600 dark:text-primary-500">
-                            44 minutes ago
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    <a
-                      href="#"
-                      className="block py-2 text-md font-medium text-center text-gray-900 bg-gray-50 hover:bg-gray-100 dark:bg-gray-600 dark:text-white dark:hover:underline"
-                    >
-                      <div className="inline-flex items-center">View all</div>
-                    </a>
-                  </div>
-
-                  <button
-                    type="button"
-                    className="p-2.5 mr-4 theme-bg-green rounded-lg"
-                  >
-                    <MdOutlineCloudDownload className="text-2xl theme-green-color" />
-                  </button>
-
-                  <button
-                    type="button"
-                    className="p-2.5 mr-4 theme-bg-gray rounded-lg"
-                  >
-                    <MdOutlineCached className="text-2xl theme-gray-color" />
-                  </button>
-
-                  <button
-                    type="button"
-                    className="p-2.5 mr-4 theme-bg-red rounded-lg relative inline-flex items-center text-sm font-medium text-center "
-                  >
-                    <MdOutlineSettings className="text-2xl theme-red-color" />
-                  </button>
-
-                  <button
-                    type="button"
-                    className="flex mx-3 text-sm"
-                    id="user-menu-button"
-                    aria-expanded="false"
-                    data-dropdown-toggle="dropdown"
-                  >
-                    <div className="flex items-center space-x-4 pl-12">
-                      <div className="font-medium dark:text-white">
-                        <div>
-                          Hello, <span className="font-bold">Ajay K</span>
-                        </div>
-                      </div>
-                      <img
-                        className="w-10 h-10 rounded-full ring-4 ring-white"
-                        src="ajay.jpeg"
-                        alt="ajay"
-                      />
-                    </div>
-                  </button>
-                  <div
-                    className="hidden z-50 my-4 w-56 text-base list-none bg-white  divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600 rounded-xl"
-                    id="dropdown"
-                  >
-                    <div className="py-3 px-4">
-                      <span className="block text-sm text-gray-900 truncate dark:text-white">
-                        ajay.k@shipease.in
-                      </span>
-                    </div>
-                    <ul
-                      className="py-1 text-gray-700 dark:text-gray-300"
-                      aria-labelledby="dropdown"
-                    >
-                      <li>
-                        <a
-                          href="#"
-                          className="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                        >
-                          My profile
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          className="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                        >
-                          Account settings
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          className="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                        >
-                          Collections
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          className="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                        >
-                          Sign out
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                {/* Notification icons start */}
-              </div>
-            </div>
-          </nav>
-          {/* nav bar end */}
-
+        <main className="p-8 ml-52 h-auto pt-20">
           {/* about user start */}
-          <div className="container mb-5 mt-5">
+          <div className="container mb-5">
             <div className="flex flex-wrap justify-between items-center">
               <div>
                 <h2 className="font-bold text-2xl">Dashboard</h2>
@@ -341,7 +499,7 @@ const Home = () => {
                 <div className="p-2.5 mr-4 theme-bg-red rounded-lg inline-flex items-center justify-center">
                   <LiaWalletSolid className="text-2xl theme-red-color" />
                 </div>
-                <div className="flex-grow">
+                <div className="flex-grow pl-6">
                   <h2 className="text-xl font-bold theme-red-color ">
                     ₹ 6206.45
                   </h2>
@@ -534,7 +692,7 @@ const Home = () => {
                       <div className="text-right">
                         <img src="graph-blue.png" className="inline-block" />
                         <span className="theme-red-color font-bold pt-5 block text-sm">
-                          -20%
+                          +20%
                         </span>
                         <p className="text-xs text-gray-600">
                           comparative analysis
